@@ -70,6 +70,8 @@ require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
 
   -- Git related plugins
+  --
+  -- removable tbh fuck git plugin ong no cap
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
 
