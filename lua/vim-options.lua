@@ -12,6 +12,8 @@ vim.g.maplocalleader = ' '
 
 vim.o.clipboard = 'unnamedplus'
 
+-- makes so enter does not autoselect autocomplete
+vim.o.completeopt = 'menuone,noselect'
 -- vim.o.termguicolors = true
 -- vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
