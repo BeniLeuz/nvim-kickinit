@@ -5,22 +5,21 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.wo.relativenumber = true
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.o.clipboard = 'unnamedplus'
+vim.o.swapfile = false
 vim.o.hlsearch = false
 vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.o.scrolloff = 999
-
+vim.o.scrolloff = 8
+vim.o.wrap = false
 
 -- makes so enter does not autoselect autocomplete
 vim.o.completeopt = 'menuone,noselect'
 -- needed for treesitter to highlight properly
 vim.o.termguicolors = true
--- vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
 
