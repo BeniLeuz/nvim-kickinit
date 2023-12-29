@@ -21,6 +21,8 @@ return {
       -- call setup for each lsp that i need
       -- TODO: automate this?
       lspconfig.lua_ls.setup({})
+      lspconfig.ruby_ls.setup({})
+      lspconfig.rubocop.setup({})
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
