@@ -5,7 +5,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.cmd("colorscheme default")
+vim.cmd("colorscheme torte")
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
