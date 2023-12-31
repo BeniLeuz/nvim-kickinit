@@ -5,6 +5,7 @@ return {
     vim.cmd 'colorscheme rose-pine'
     require('rose-pine').setup {
       disable_background = true,
+      disable_italics = true
     }
 
     function ColorMyPencils(color)
