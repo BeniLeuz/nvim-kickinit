@@ -12,5 +12,5 @@ Most knowledge taken from this series: https://www.youtube.com/watch?v=4zyZ3sw_u
 2. Font im using is: Fira Mono (Using Fira Code with ligatures is a sin)
 
 #### todo:
-macros? why not working hello?
-vertical line edit not working?
+- macros? why not working hello?
+- vertical line edit instant replace without deleting and then replacing 
