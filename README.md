@@ -11,4 +11,6 @@ Most knowledge taken from this series: https://www.youtube.com/watch?v=4zyZ3sw_u
 1. Download RipGrep for telescope
 2. Font im using is: Fira Mono (Using Fira Code with ligatures is a sin)
 
-
+#### todo:
+macros? why not working hello?
+vertical line edit not working?
