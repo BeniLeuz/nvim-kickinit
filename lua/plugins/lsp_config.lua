@@ -27,13 +27,15 @@ return {
 
       lspconfig.ruby_ls.setup {
         capabilities = capabilities,
+        filetypes = { 'ruby', 'eruby' },
       }
 
       lspconfig.solargraph.setup {
         capabilities = capabilities,
+        filetypes = { 'ruby', 'eruby' },
       }
 
-      -- not actually needed cause solargraph crazy fr 
+      -- not actually needed cause solargraph crazy fr
       --      lspconfig.rubocop.setup {
       --        capabilities = capabilities,
       --      }
@@ -45,7 +47,6 @@ return {
       lspconfig.cssls.setup {
         capabilities = capabilities,
       }
-
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
