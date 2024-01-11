@@ -10,7 +10,7 @@ return {
     'williamboman/mason-lspconfig.nvim',
     config = function()
       require('mason-lspconfig').setup {
-        ensure_installed = { 'lua_ls', 'rubocop', 'ruby_ls', 'tsserver', 'cssls', 'solargraph' },
+        ensure_installed = { 'lua_ls', 'rubocop', 'ruby_ls', 'tsserver', 'cssls', 'solargraph', 'clangd', 'html' },
       }
     end,
   },
@@ -25,9 +25,18 @@ return {
         capabilities = capabilities,
       }
 
+      lspconfig.html.setup {
+        capabilities = capabilities,
+        filetypes = { 'html', 'eruby' },
+      }
+
+      lspconfig.clangd.setup {
+        capabilities = capabilities,
+      }
+
       lspconfig.ruby_ls.setup {
         capabilities = capabilities,
-        filetypes = { 'ruby', 'eruby' },
+        filetypes = { 'ruby' },
       }
 
       lspconfig.solargraph.setup {
