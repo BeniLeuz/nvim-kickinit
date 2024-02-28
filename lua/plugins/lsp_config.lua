@@ -27,7 +27,7 @@ return {
 
       lspconfig.html.setup {
         capabilities = capabilities,
-        filetypes = { 'html' },
+        filetypes = { 'html', 'md' },
       }
 
       lspconfig.clangd.setup {
