@@ -10,7 +10,7 @@ return {
     'williamboman/mason-lspconfig.nvim',
     config = function()
       require('mason-lspconfig').setup {
-        ensure_installed = { 'lua_ls', 'rubocop', 'ruby_ls', 'tsserver', 'cssls', 'solargraph', 'clangd', 'html' },
+        ensure_installed = { 'lua_ls', 'rubocop', 'ruby_ls', 'tsserver', 'cssls', 'solargraph', 'clangd', 'html', 'jdtls'},
       }
     end,
   },
@@ -42,6 +42,10 @@ return {
       lspconfig.solargraph.setup {
         capabilities = capabilities,
         filetypes = { 'ruby', 'eruby' },
+      }
+
+      lspconfig.jdtls.setup {
+        capabilities = capabilities,
       }
 
       -- not actually needed cause solargraph crazy fr
