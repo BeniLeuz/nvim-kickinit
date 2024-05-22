@@ -10,7 +10,18 @@ return {
     'williamboman/mason-lspconfig.nvim',
     config = function()
       require('mason-lspconfig').setup {
-        ensure_installed = { 'lua_ls', 'rubocop', 'ruby_ls', 'tsserver', 'cssls', 'solargraph', 'clangd', 'html', 'jdtls'},
+        ensure_installed = {
+          'lua_ls',
+          'rubocop',
+          'ruby_ls',
+          'tsserver',
+          'cssls',
+          'solargraph',
+          'clangd',
+          'html',
+          'jdtls',
+          'omnisharp'
+        },
       }
     end,
   },
@@ -23,6 +34,17 @@ return {
 
       lspconfig.lua_ls.setup {
         capabilities = capabilities,
+      }
+
+      lspconfig.omnisharp.setup {
+        capabilities = capabilities,
+        cmd = { 'dotnet', vim.fn.stdpath 'data' .. '/mason/packages/omnisharp/libexec/OmniSharp.dll' },
+        enable_import_completion = true,
+        organize_imports_on_format = true,
+        enable_roslyn_analyzers = true,
+        root_dir = function()
+          return vim.loop.cwd() -- current working directory
+        end,
       }
 
       lspconfig.html.setup {
