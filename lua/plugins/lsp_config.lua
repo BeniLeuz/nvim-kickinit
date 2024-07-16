@@ -20,7 +20,8 @@ return {
           'clangd',
           'html',
           'jdtls',
-          'omnisharp'
+          'omnisharp',
+          'gopls'
         },
       }
     end,
@@ -34,6 +35,10 @@ return {
 
       lspconfig.lua_ls.setup {
         capabilities = capabilities,
+      }
+
+      lspconfig.gopls.setup {
+        capabilities = capabilities
       }
 
       lspconfig.omnisharp.setup {
