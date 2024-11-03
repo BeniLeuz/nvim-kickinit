@@ -21,7 +21,8 @@ return {
           'html',
           'jdtls',
           'omnisharp',
-          'gopls'
+          'gopls',
+          'hls',
         },
       }
     end,
@@ -55,6 +56,10 @@ return {
       lspconfig.html.setup {
         capabilities = capabilities,
         filetypes = { 'html', 'md' },
+      }
+
+      lspconfig.hls.setup {
+        capabilities = capabilities,
       }
 
       lspconfig.clangd.setup {
