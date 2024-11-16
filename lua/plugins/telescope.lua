@@ -12,6 +12,7 @@ return {
     },
   },
   config = function()
+    local actions = require("telescope.actions")
     require('telescope').setup {
       defaults = {
         file_ignore_patterns = { "^.git/" },
@@ -20,6 +21,10 @@ return {
             ['<C-u>'] = false,
             ['<C-d>'] = false,
           },
+          n = {
+            ['<C-c>'] = actions.close,
+            ['q'] = actions.close,
+          }
         },
       },
       pickers = {
