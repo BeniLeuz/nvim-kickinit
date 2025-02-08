@@ -23,6 +23,7 @@ return {
           'omnisharp',
           'gopls',
           'hls',
+          'groovyls',
         },
       }
     end,
@@ -36,6 +37,10 @@ return {
 
       lspconfig.lua_ls.setup {
         capabilities = capabilities,
+      }
+
+      lspconfig.groovyls.setup {
+        cmd = { "groovy-language-server" },
       }
 
       lspconfig.gopls.setup {
