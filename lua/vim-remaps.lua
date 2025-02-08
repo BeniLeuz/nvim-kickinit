@@ -22,10 +22,13 @@ vim.keymap.set( 'x' , '<leader>p', "\"_dP")
 -- TODO: Check if maybe it makes sense to use ctrl c and leader c for copying rather thanusing yank
 vim.keymap.set( 'n' , '<leader>y', "\"+y")
 vim.keymap.set( 'v' , '<leader>y', "\"+y")
-vim.keymap.set( 'n' , '<leader>Y', "\"+y")
 
 
 -- remap esc to ctrl-c
 vim.keymap.set( 'i' , '<C-c>', "<Esc>")
 -- Literal search and replace
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+
+-- showing up diagnostics with newlines in a floating window
+vim.keymap.set({"n" , "v", "i"}, "<leader>cd", vim.diagnostic.open_float)
