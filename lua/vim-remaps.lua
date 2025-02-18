@@ -31,4 +31,4 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 
 -- showing up diagnostics with newlines in a floating window
-vim.keymap.set({"n" , "v", "i"}, "<leader>cd", vim.diagnostic.open_float)
+vim.keymap.set({"n"}, "<leader>cd", vim.diagnostic.open_float)
